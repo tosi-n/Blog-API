@@ -12,7 +12,7 @@ class Query(graphene.AbstractType):
     all_posts = graphene.List(PostType)
 
 
-    def resolve_all_posts(self, args, context, info):
+    def resolve_all_posts(self, args):
         return Post.objects.all()
 
 
